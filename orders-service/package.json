@@ -1,0 +1,44 @@
+{
+  "name": "orders-service",
+  "version": "0.1.0",
+  "bin": {
+    "orders-service": "bin/orders-service.js"
+  },
+  "scripts": {
+    "deploy:develop": "STAGE=develop cdk deploy --all",
+    "synth:develop": "STAGE=develop cdk synth --all",
+    "remove:develop": "STAGE=develop cdk destroy --all"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/http-errors": "^2.0.4",
+    "@types/jest": "^29.5.12",
+    "@types/node": "22.5.4",
+    "@types/uuid": "^10.0.0",
+    "aws-cdk": "2.162.1",
+    "esbuild": "^0.24.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.2"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.10.0",
+    "@aws-lambda-powertools/metrics": "^2.10.0",
+    "@aws-lambda-powertools/tracer": "^2.10.0",
+    "@aws-sdk/client-dynamodb": "^3.679.0",
+    "@aws-sdk/util-dynamodb": "^3.679.0",
+    "@middy/core": "^5.5.1",
+    "@middy/http-error-handler": "^5.5.1",
+    "@middy/sqs-partial-batch-failure": "^5.5.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "aws-cdk-lib": "2.162.1",
+    "constructs": "^10.0.0",
+    "convict": "^6.2.4",
+    "http-errors": "^2.0.0",
+    "source-map-support": "^0.5.21",
+    "uuid": "^10.0.0"
+  }
+}
